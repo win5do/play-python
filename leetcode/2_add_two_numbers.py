@@ -1,5 +1,6 @@
 from typing import List
 
+
 # Definition for singly-linked list.
 
 
@@ -44,18 +45,15 @@ class Solution:
                 print("{}".format(l.val))
             l = l.next
 
-if __name__ == "__main__":
-    s = Solution()
-    a = s.buildListNode([2, 4, 3])
-    b = s.buildListNode([5, 6, 4])
-    r = s.addTwoNumbers(a, b)
 
-    print('---')
-    a = s.buildListNode([5])
-    b = s.buildListNode([5])
-    r = s.addTwoNumbers(a, b)
-
-    print('---')
-    a = s.buildListNode([1, 2, 3])
-    b = s.buildListNode([9, 7, 6, 0, 1])
-    r = s.addTwoNumbers(a, b)
+if __name__ == '__main__':
+    for i in [
+        ([2, 4, 3], [5, 6, 4]),
+        ([5], [5]),
+        ([1, 2, 3], [9, 7, 6, 0, 1]),
+    ]:
+        s = Solution()
+        a = s.buildListNode(i[0])
+        b = s.buildListNode(i[1])
+        s.addTwoNumbers(a, b)
+        print('---')
