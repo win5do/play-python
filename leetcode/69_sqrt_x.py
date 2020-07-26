@@ -37,7 +37,7 @@ class Solution2:
         return int(x0)
 
 
-class TestSqrt(unittest.TestCase):
+class Test(unittest.TestCase):
     def test_bisection(self):
         for x in range(0, 1000):
             self.assertEqual(Solution().mySqrt(x), int(math.sqrt(x)))
